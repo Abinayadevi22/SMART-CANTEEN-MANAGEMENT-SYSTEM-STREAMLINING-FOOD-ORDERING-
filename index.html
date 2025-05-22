@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>College Canteen Management System</h1>
+    </header>
+
+    <main>
+        <button id="toggle-menu-button">Show Menu</button>
+
+        <section id="menu-section" style="display: none;">
+            <h2>Menu</h2>
+            <h3>Morning Menu</h3>
+            <div>
+                <div class="menu-item">
+                    <label>
+                    <img src="https://img.freepik.com/premium-photo/fresh-coffee-steams-wooden-table-hot-coffee_1298753-996.jpg" alt="Coffee" style="width: 50px; height: 50px;"> Coffee - ₹1
+                        <input type="checkbox" class="item" data-price="1">
+                    </label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </div>
+                <div class="menu-item">
+                    <label>
+                        <img src="https://static.toiimg.com/thumb/54714340.cms?imgsize=458099&width=800&height=800" alt="Sandwich" style="width: 50px; height: 50px;">Sandwich - ₹15
+                        <input type="checkbox" class="item" data-price="15">
+                    </label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </div>
+            </div>
+
+            <h3>Lunch Menu</h3>
+            <div>
+                <div class="menu-item">
+                    <label>
+                        <img src="https://timesharesrilanka.com/wp-content/uploads/2022/02/rice-and-curry-sri-lanka.jpg" alt="Rice&Curry" style="width: 50px; height: 50px;">Rice & Curry - ₹50
+                        <input type="checkbox" class="item" data-price="50">
+                    </label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </div>
+                <div class="menu-item">
+                    <label>
+                        <img src="https://foodhub.scene7.com/is/image/woolworthsltdprod/Easy-chicken-and-bacon-pasta?wid=1300&hei=1300&fmt=png-alpha" alt="Pasta" style="width: 50px; height: 50px;">Pasta - ₹40
+                        <input type="checkbox" class="item" data-price="40">
+                    </label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </div>
+            </div>
+
+            <h3>Evening Menu</h3>
+            <div>
+                <div class="menu-item">
+                    <label>
+                        <img src="https://static.toiimg.com/photo/83173328.cms" alt="Tea" style="width: 50px; height: 50px;">Tea - ₹30
+                        <input type="checkbox" class="item" data-price="30">
+                    </label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </div>
+                <div class="menu-item">
+                    <label>
+                        <img src="https://www.biscuitpeople.com/media/cache/platform_hq/430671b10edbce04b3614e7c905d4a428e0a8d5a.png" alt="Biscuit" style="width: 50px; height: 50px;">Biscuit - ₹25
+                        <input type="checkbox" class="item" data-price="25">
+                    </label>
+                    <input type="number" class="quantity" value="1" min="1">
+                </div>
+            </div>
+
+            <h3>Enter Your Name and Phone Number:</h3>
+            <input type="text" id="customer-name" placeholder="Enter Name"><br>
+            <input type="text" id="phone-number" placeholder="Enter Phone Number"><br>
+
+            <h3>Payment Method:</h3>
+            <label><input type="radio" name="payment-method" value="Online Payment" checked> Online Payment</label><br>
+            <label><input type="radio" name="payment-method" value="Cash on Delivery"> Cash on Delivery</label><br>
+            
+            <button id="submit-order">Submit Order</button>
+        </section>
+
+        <section id="order-summary" style="display: none;">
+            <h2>Order Summary</h2>
+            <div id="summary-details"></div>
+            <button id="confirm-payment">Confirm Payment</button>
+        </section>
+
+        <section id="login-section">
+            <h2>Owner Login</h2>
+            <input type="password" id="owner-password" placeholder="Enter Password">
+            <button id="login-button">Login</button>
+            <div id="order-details" style="display: none;">
+                <h3>Order Details</h3>
+                <ul id="orders-list"></ul> <!-- Orders list with Mark Delivered button -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
